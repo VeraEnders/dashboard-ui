@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/img/bg-img.svg" type="image/svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet">
@@ -11,24 +12,24 @@
   
   <title>Dashboard UI</title>
 </head>
-<body>
-  <main>
+<body class="wrapper">
+  <main class="container">
     <section class="top">
       <nav>
-        <ul>
-          <li><a href="#">Dashboard</a></li>
+        <ul class="nav-list">
+          <li><a href="#" class="active">Dashboard</a></li>
           <li><a href="#">Projects</a></li>
           <li><a href="#">Users</a></li>
         </ul>
       </nav>
       <div class="profile">
-        <button>
+        <button class="btn">
           <i class="fa-solid fa-plus"></i>
           Add new segment
         </button>
         <div class="notifications">
           <i class="fa-solid fa-bell"></i>
-          <span>3</span>
+          <span class="notifications-count">3</span>
         </div>
         <div class="profile-pic">
           <i class="fa-solid fa-user-tie"></i>
@@ -43,6 +44,7 @@
       <p>
         Upgrade to <span>PRO</span> to unlock more features
       </p>
+      <button class="btn btn-upgrate">Upgrade</button>
     </section>
 
     <section class="statistics">

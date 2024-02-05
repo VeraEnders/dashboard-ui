@@ -1,13 +1,170 @@
-* {
+:root {
+  --clr-white: #ffffff;
+  --clr-body: #aaafff;
+  --clr-text: #42404b;
+  --clr-btn: #9d74ff;
+  --clr-update: #292847;
+  --clr-icon: #ffed00;
+  --ff: 'Poppins', sans-serif;
+}
+
+/* Reset style */
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: inherit;
+}
+ul {
+  list-style: none;
 }
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
+button {
+  outline: none;
+}
+
+/* Main style */
 body {
   min-height: 100vh;
+  font-family: var(--ff);
+  background: var(--clr-body);
+  background-image: url('./assets/img/bg-img.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 50rem;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 0.75rem;
+  width: 10.7rem;
+  border: 2px solid var(--clr-btn);
+  border-radius: 0.5rem;
+  background: var(--clr-btn);
+  color: var(--clr-white);
+  font-size: 0.8rem;
+  transition: all 0.5s;
+}
+
+.btn i {
+  padding-right: 0.5rem;
+}
+
+.btn:hover {
+  background: var(--clr-white);
+  color: var(--clr-btn);
+  border-color: var(--clr-btn);
+}
+
+/* Top section */
+.top {
+  grid-column: 1 / -1;
+  padding: 1.25rem 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--clr-white);
+  border-radius: 0.625rem;
+}
+
+.nav-list {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-list a {
+  position: relative;
+  font-size: 0.9rem;
+}
+
+.nav-list a::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  width: 0;
+  height: 3px;
+  background: var(--clr-update);
+  transition: width 0.5s;
+}
+
+.nav-list a:hover::before {
+  width: 100%;
+}
+
+a.active {
+  font-weight: 500;
+}
+
+/* Profile */
+.profile {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media only screen and (min-width: 572px) {
+  .profile {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .profile {
+    gap: 2.5rem;
+  }
+}
+ 
+.notifications {
+  position: relative;
+  cursor: pointer;
+}
+
+.notifications i {
+  font-size: 1.25rem;
+}
+
+.notifications-count {
+  position: absolute;
+  right: -5px;
+  top: -7px;
+  width: 1rem;
+  background: var(--clr-btn);
+  color: var(--clr-white);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.profile-pic {
+  margin-left: auto;
+  width: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--clr-body);
+  color: var(--clr-white);
+  border-radius: 50%;
+  aspect-ratio: 1;
+  cursor: pointer;
 }
