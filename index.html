@@ -9,8 +9,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="./style.css">
-  
   <title>Dashboard UI</title>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body class="wrapper">
   <main class="container">
@@ -53,7 +54,7 @@
         <h2>Users</h2>
         <p>9,452</p>
         <div>
-          <!-- chart -->
+          <canvas id="users-chart"></canvas>
         </div>
       </div>
 
@@ -62,7 +63,7 @@
         <h2>New users</h2>
         <p>6,245</p>
         <div>
-          <!-- chart -->
+          <canvas id="new-users-chart"></canvas>
         </div>
       </div>
 

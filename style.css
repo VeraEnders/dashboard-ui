@@ -44,19 +44,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-inline: 1rem;
 }
 
 .container {
   width: 50rem;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2.5rem;
+  gap: 1rem;
   transition: all .5s;
 }
 
 @media only screen and (min-width: 768px) {
   .container {
     grid-template-columns: 15rem auto;
+    gap: 2.5rem;
   }
 }
 
@@ -238,8 +240,15 @@ a.active {
 /* Statistics Sections */
 .statistics {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1 fr;
   gap: 1rem;
+  place-content: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .statistics {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .statistics h2 {
@@ -255,7 +264,15 @@ a.active {
 
 .users,
 .new-users {
-  padding: 1.25rem 1.25rem 0;
+  padding: 1.25rem;
+  max-width: 15rem;
+}
+
+@media only screen and (min-width: 820px) {
+  .users,
+  .new-users {
+  max-width: 20rem;
+}
 }
 
 .percentage {
@@ -339,4 +356,12 @@ a.active {
   50% {
     transform: scale(0.2);
   }
+}
+
+/* Charts */
+#users-chart,
+#new-users-chart {
+  display: block;
+  height: 3.75rem;
+  width: 13.313rem;
 }
